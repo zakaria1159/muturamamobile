@@ -1,0 +1,66 @@
+<ion-header class="walkthrough-header">
+  <ion-toolbar>
+    <ion-buttons end>
+      <button ion-button class="skip-button" (click)="skipIntro()" [hidden]="lastSlide">Passer</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="walkthrough-content">
+  <ion-slides #slider (ionSlideDidChange)="onSlideChanged()" pager="true">
+    <ion-slide class="slide-1">
+      <ion-row class="intro-image-row">
+        <ion-col center width-64 no-padding>
+          <preload-image [ratio]="{w:1, h:1.3}" src="./assets/images/muturama_Logo_White.png" alt="app logo" title="ion2FullApp"></preload-image>
+        </ion-col>
+      </ion-row>
+      <h3 class="main-title">Muturama</h3>
+      <p class="intro-text">
+        Texte d'introduction
+      </p>
+    </ion-slide>
+    <ion-slide class="slide-2">
+      <ion-row class="intro-image-row">
+        <ion-col center width-64 no-padding>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-2-img.png" alt="slide 2 img" title="ion2FullApp"></preload-image>
+        </ion-col>
+      </ion-row>
+      <h2 class="main-title">Vous cherchez des services ?</h2>
+      <p class="intro-text">
+        Texte d'introduction
+      </p>
+      <p class="intro-text">
+        Texte d'introduction
+      </p>
+    </ion-slide>
+    <ion-slide class="slide-3">
+      <ion-row class="intro-image-row">
+        <ion-col center width-64 no-padding>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-3-img.png" alt="slide 3 img" title="ion2FullApp"></preload-image>
+        </ion-col>
+      </ion-row>
+      <h2 class="main-title">Get ready!</h2>
+      <p class="intro-text">
+        Soon your app will look and feel awesome!
+      </p>
+    </ion-slide>
+    <ion-slide class="slide-4">
+      <ion-row class="intro-image-row">
+        <ion-col center width-64 no-padding>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-4-img.png" alt="slide 4 img" title="ion2FullApp"></preload-image>
+        </ion-col>
+      </ion-row>
+      <h2 class="main-title">Almost done!</h2>
+      <p class="intro-text">
+        Veuillez vous connecter!.
+      </p>
+      <p class="intro-text">
+        
+      </p>
+      <div class="button-bar">
+        <button ion-button primary (click)="goToLogin()">Se connecter</button>
+        <button ion-button primary (click)="goToSignup()">S'inscrire</button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
